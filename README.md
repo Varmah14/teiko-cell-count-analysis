@@ -12,7 +12,7 @@ make dashboard  # starts the Streamlit dashboard
 
 `make dashboard` runs a Streamlit server on port 8501. In GitHub Codespaces this triggers a port forward and a popup with a link to open it in the browser. Locally, it's at `http://localhost:8501`.
 
-**Dashboard link:** _fill in after running `make dashboard` in Codespaces_
+**Dashboard link:** https://teiko-cell-count-analysis.streamlit.app/
 
 ## Repository structure
 
