@@ -1,0 +1,1 @@
+Average b_cell count, melanoma males, all sample/treatment types, responders at time_from_treatment_start=0: 10206.15
