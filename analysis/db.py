@@ -20,7 +20,11 @@ def get_connection() -> sqlite3.Connection:
         import load_data
 
         load_data.main()
-    return sqlite3.connect(DB_PATH)
+    # check_same_thread=False: dashboard/app.py caches this connection with
+    # st.cache_resource and reuses it across calls that Streamlit may run on
+    # a different thread. We only ever read here, so sharing the connection
+    # across threads is safe.
+    return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 
 def ensure_output_dir() -> Path:
